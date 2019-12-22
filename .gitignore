@@ -1,0 +1,10 @@
+venv
+venv/*
+.idea/*
+.idea
+__pycache__/
+HarvestChallenge.txt
+
+HarvestChallenge.spec
+build/
+dist/

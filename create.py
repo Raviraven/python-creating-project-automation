@@ -8,11 +8,12 @@ password = ""
 
 
 def create():
-    folder_name = str(sys.argv[1])
-    os.makedirs(path + folder_name)
+    project_folder_type = str(sys.argv[1])
+    folder_name = str(sys.argv[2])
+    os.makedirs(path + project_folder_type + folder_name)
     user = Github(username, password).get_user()
-    repo = user.create_repo(folder_name)
-    print("Repository {0} created successfully".format(folder_name))
+    #repo = user.create_repo(folder_name)
+    #print("Repository {0} created successfully".format(folder_name))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 venv
 venv/*
+venv3.6/
 .idea/*
 .idea
 __pycache__/
@@ -8,3 +9,5 @@ HarvestChallenge.txt
 HarvestChallenge.spec
 build/
 dist/
+
+Credentials.py

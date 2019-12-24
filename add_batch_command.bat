@@ -1,3 +1,4 @@
+@echo off
 :create
 cd
 py create.py %1 %2

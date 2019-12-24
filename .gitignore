@@ -11,3 +11,7 @@ build/
 dist/
 
 Credentials.py
+
+geckodriver.exe
+geckodriver.log
+operadriver_win64/

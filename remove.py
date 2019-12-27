@@ -13,7 +13,9 @@ def remove():
 
 def remove_repo_directory(project_language, project_name):
     try:
-        os.removedirs("{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name))
+        directory = "{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name)
+        os.removedirs(directory)
+        print("Directory {0} created".format(directory))
     except Exception as error:
         print("Error occured during deleting directory: {0}".format(error))
 

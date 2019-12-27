@@ -1,6 +1,6 @@
 @echo off
 :remove
-cd
+cd /
 py remove.py %1 %2
-cd E:/Dokumenty/Projekty/%1/%2
+cd /
 exit /B 0

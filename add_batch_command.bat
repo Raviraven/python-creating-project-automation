@@ -2,7 +2,7 @@
 :create
 cd
 py create.py %1 %2
-cd E:/Dokumenty/Projekty/%1/%2
+cd /d E:/Dokumenty/Projekty/%1/%2
 git init
 git remote add origin git@github.com:Raviraven/%1-%2.git
 touch README.md

@@ -22,8 +22,8 @@ import Credentials
 
 
 def create():
-    project_language = "python" # str(sys.argv[1])
-    project_name = "project" # str(sys.argv[2])
+    project_language = str(sys.argv[1])
+    project_name = str(sys.argv[2])
     os.makedirs("{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name))
     user = Github(Credentials.username, Credentials.password).get_user()
     repo = user.create_repo("{0}-{1}".format(project_language, project_name))

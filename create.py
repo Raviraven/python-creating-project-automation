@@ -36,7 +36,7 @@ def create_repo_directory(project_language, project_name):
 
 def create_repository(project_language, project_name, access_mode):
     try:
-        user = Github(Credentials.username, Credentials.password).get_user()
+        user = Github(login_or_token=Credentials.git_token).get_user()
         repo = user.create_repo(name="{0}-{1}".format(project_language, project_name), private=access_mode)
         print("Repository {0}-{1} created successfully, private set to: {2}".format(project_language, project_name, access_mode))
     except Exception as error:

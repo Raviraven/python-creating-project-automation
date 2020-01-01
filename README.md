@@ -9,7 +9,7 @@
 
        path=""
        username=""
-       password=""
+       git_token=""
       
    filled with your data
    

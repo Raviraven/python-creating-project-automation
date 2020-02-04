@@ -1,7 +1,7 @@
 @echo off
 :create
 cd
-py create.py %1 %2
+py create.py %1 %2 %3
 cd /d D:/Dokumenty/Projekty/%1/%2
 git init
 git remote add origin https://github.com/Raviraven/%1-%2.git

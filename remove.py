@@ -15,7 +15,7 @@ def remove():
 
 def remove_repo_directory(project_language, project_name):
     try:
-        directory = "{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name)
+        directory = get_dir_path_linux(project_language, project_name)
         shutil.rmtree(path=directory, onerror=remove_readonly)
         #os.removedirs(directory)
         print("Directory {0} deleted".format(directory))
@@ -36,6 +36,14 @@ def remove_repository(project_language, project_name):
 def remove_readonly(func, path, excinfo):
     os.chmod(path, stat.S_IWRITE)
     func(path)
+
+
+def get_dir_path_windows(project_language, project_name)): 
+    return "{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name)
+
+
+def get_dir_path_linux(project_language, project_name)):
+    return "{0}/{1}/{2}".format(Credentials.path, project_language, project_name)
 
 
 if __name__ == "__main__":

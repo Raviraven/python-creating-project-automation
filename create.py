@@ -27,7 +27,7 @@ def get_access_mode():
 
 def create_repo_directory(project_language, project_name):
     try:
-        directory = "{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name)
+        directory = get_dir_path_linux(project_language, project_name)
         os.makedirs(directory)
         print("Directory {0} created".format(directory))
     except Exception as error:
@@ -41,6 +41,16 @@ def create_repository(project_language, project_name, access_mode):
         print("Repository {0}-{1} created successfully, private set to: {2}".format(project_language, project_name, access_mode))
     except Exception as error:
         print("Error occured during deleting repository: {0}".format(error))
+
+
+def get_dir_path_windows(project_language, project_name):
+    directory = "{0}\\{1}\\{2}".format(Credentials.path, project_language, project_name)
+    return directory
+
+
+def get_dir_path_linux(project_language, project_name):
+    directory = "{0}/{1}/{2}".format(Credentials.path, project_language, project_name)
+    return directory
 
 
 if __name__ == "__main__":
